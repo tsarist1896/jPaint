@@ -1,0 +1,7 @@
+html {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABHNCSVQICAgIfAhkiAAAADZJREFUGJVjvHnz5n8GNKCmpoYuxMCELIGs4NatWyg048CZyPj//38MhTBTMKxGtwabcwbQRAAS5jehOj41tgAAAABJRU5ErkJggg==');
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,278 @@
+main {
+    margin: 1em;
+}
+
+#images_block, .web_paint {
+    background-color: #f6f4f0;
+    border: 1px solid #e8e8e8;
+    min-height: 50px;
+}
+
+
+
+
+
+/* ---------- Строчное меню ---------- */
+
+.menu_bar {
+    margin: 0 0 1em 0;
+    padding: 0 0.3em;
+    background-color: #e8e8e8;
+}
+.menu_bar_item {
+    position: relative;
+    padding: 0.25em 0.5em;
+    display: inline-block;
+}
+.menu_bar_item::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, #e8e8e8 0%,#d8d8d8 50%, #e8e8e8 100%);
+}
+.menu_bar_item:last-child::after {
+    display: none;
+}
+.menu_bar_item a,
+.menu_bar_subitem a {
+    padding: 0.25em 0.5em;
+    color: #333;
+    text-decoration: none;
+}
+.menu_bar_subitems {
+    position: absolute;
+    display: none;
+    top: 100%;
+    margin: 0 0 0 -0.3em;
+    padding: 0;
+    background-color: #e8e8e8;
+    box-shadow: 2px 2px 5px silver;
+    z-index: 100;
+}
+.menu_bar_subitems:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 1px;
+    right: 1px;
+    height: 2px;
+    background: linear-gradient(to right, #e8e8e8 0%, #e8e8e8 5%, #f0f0f0 50%, #e8e8e8 95%, #e8e8e8 100%);
+}
+.menu_bar_item:hover .menu_bar_subitems {
+    display: block;
+}
+.menu_bar_subitem {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    background-color: #e8e8e8;
+    list-style-type: none;
+    overflow: hidden;
+}
+.menu_bar_subitem a {
+    display: block;
+    padding: 0.2em 0.8em;
+}
+.menu_bar_subitem:hover {
+    background-color: #f5f5f5;
+    background: linear-gradient(to right, #e8e8e8 0%, #fafafa 20%, #fafafa 50%, #fafafa 80%, #e8e8e8 100%);
+    color: black;
+}
+
+/* ---------- \Строчное меню ---------- */
+
+
+
+.color_sidebar {
+    margin: 0 0 10px 80px;
+}
+.color_sidebar_current_value {
+    display: inline-block;
+    margin: 2px;
+    padding: 0;
+    width: 2em;
+    height: 2em;
+    float: left;
+    border: 2px inset #e8e8e8;
+}
+.color_sidebar_colors {
+    margin: 0;
+    padding: 0;
+    height: 20px;
+}
+.color_sidebar_value {
+    display: inline-block;
+    margin: 1px;
+    padding: 0;
+    width: 1em;
+    height: 1em;
+    border: 1px inset #e8e8e8;
+    cursor: pointer;
+}
+.color_sidebar input[type="color"] {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+}
+
+#switch_blocks span {
+    display: none;
+    margin: 0 0.15em;
+    padding: 0.1em 0.5em;
+    background: linear-gradient(to bottom, #D8D8D8 0%,white 50%, #D8D8D8 100%);
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: #D4D4D4;
+    border-radius: 3px 3px 0 0;
+    font-size: 14pt;
+    color: #a8a8a8;
+    cursor: pointer;
+}
+
+#switch_blocks span.active {
+    color: black;
+}
+
+details summary {
+    cursor: pointer;
+}
+#images_block figure {
+    max-width: 350px;
+    max-height: 350px;
+    border: 1px solid #dfdfdf;
+}
+
+#images_block figure span {
+    display: flex;
+}
+#images_block figure span,
+#images_block figure span img {
+    display: flex;
+    max-width: 350px;
+    max-height: 300px;
+}
+#images_block img {
+    margin: auto;
+}
+#images_block figure figcaption {
+    padding: 1em 0.5em;
+    background-color: white;
+}
+
+
+.web_paint .left_sidebar {
+    margin: 0;
+    padding: 0;
+    width: 62px;
+    min-height: 120px;
+    background-color: #e8e8e8;
+    border: 1px solid #d8d8d8;
+    float: left;
+    box-shadow: 2px 2px #ddd;
+    z-index: 50;
+}
+.web_paint .left_sidebar li {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: #d8d8d8;
+    float: left;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.web_paint .left_sidebar li.ls_button_select {
+    background-image: url('/img/buttons/select.png');
+}
+.web_paint .left_sidebar li.ls_button_text {
+    background-image: url('/img/buttons/text.png');
+}
+.web_paint .left_sidebar li.ls_button_sampling {
+    background-image: url('/img/buttons/sampling.png');
+}
+.web_paint .left_sidebar li.ls_button_eraser {
+    background-image: url('/img/buttons/eraser.png');
+}
+.web_paint .left_sidebar li.ls_button_filling {
+    background-image: url('/img/buttons/filling.png');
+}
+.web_paint .left_sidebar li.ls_button_spray {
+    background-image: url('/img/buttons/spray.png');
+}
+.web_paint .left_sidebar li.ls_button_brush {
+    background-image: url('/img/buttons/brush.png');
+}
+.web_paint .left_sidebar li.ls_button_pencil {
+    background-image: url('/img/buttons/pencil.png');
+}
+.web_paint .left_sidebar li.ls_button_line {
+    background-image: url('/img/buttons/line.png');
+}
+.web_paint .left_sidebar li.ls_button_curve {
+    background-image: url('/img/buttons/curve.png');
+}
+.web_paint .left_sidebar li.ls_button_rectangle {
+    background-image: url('/img/buttons/rectangle.png');
+}
+.web_paint .left_sidebar li.ls_button_rounded_rectangle {
+    background-image: url('/img/buttons/rounded_rectangle.png');
+}
+.web_paint .left_sidebar li.ls_button_circle {
+    background-image: url('/img/buttons/circle.png');
+}
+.web_paint .left_sidebar li.ls_button_magnifier {
+    background-image: url('/img/buttons/magnifier.png');
+}
+
+
+.web_paint .left_sidebar li:hover {
+    opacity: 1;
+}
+
+.web_paint .left_sidebar li.active {
+    opacity: 1;
+    background-color: #d8d8d8;
+}
+
+.web_paint .paint_canvas {
+    margin-left: 1em;
+    display: inline-block;
+}
+
+.web_paint .paint_canvas iframe {
+    width: 450px;
+    height: 450px;
+    border: 1px solid #e8e8e8;
+}
+
+
+#container pre {
+    margin: 1em;
+    border-top:     1px dotted #c8c8c8;
+    border-bottom:  1px dotted #c8c8c8;
+}
+.matrix {
+    margin: 1.5em 0.5em;
+    background-color: white;
+    border: 1px solid silver;
+    border-collapse: collapse;
+}
+.matrix th {
+    background-color: #d5d5d5;
+}
+.matrix th, .matrix td {
+    padding: 0.25em;
+    border: 1px solid silver;
+    text-align: center;
+}
+.canvas_graph {
+    border: 1px solid silver;
+    min-width: 100px;
+    min-height: 100px;
+    background-color: white;
+}
